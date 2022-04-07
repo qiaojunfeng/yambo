@@ -7012,7 +7012,7 @@ ia64*linux* )
   ;;
 *x86*64* )
   case "${FC}" in
-  *pgf9* | *ftn* | *pgfortran* | *nvfortran* )
+  *pgf9* | *pgfortran* | *nvfortran* )
     SYSFLAGS="-O1 -gopt -Mnoframe -Mdalign -Mbackslash -cpp"
     #SYSFLAGS="-O2 -g -Munroll -Mnoframe -Mdalign -Mbackslash -cpp"
     FUFLAGS="-O0 -g -Mbackslash -cpp"
@@ -7022,7 +7022,7 @@ ia64*linux* )
     NETCDFFLAGS="-DpgiFortran"
     DEBUG_FLAGS="-g -Minform=inform -Mbounds -Mchkptr -Mchkstk -Meh_frame  -Mbackslash -cpp"
     ;;
-  *gfortran*)
+  *gfortran* | ftn )
     SYSFLAGS="-O3 -g -mtune=native"
     FUFLAGS="-O0 -g -mtune=native"
     FCMFLAG=""
